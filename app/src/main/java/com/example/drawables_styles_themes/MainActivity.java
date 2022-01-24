@@ -3,10 +3,11 @@ package com.example.drawables_styles_themes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
-//TODO: Task 4: Themes and Final Touches
+//TODO: Task 4.3: Themes and Final Touches
 //https://google-developer-training.github.io/android-developer-fundamentals-course-practicals/en/Unit%202/51_p_themes,_custom_styles,_drawables.html?q=
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         textViewScoreT2 = findViewById(R.id.team2_score);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
 
 
     public void decreaseScore(View view) {
